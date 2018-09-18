@@ -78,7 +78,7 @@ let init_room = () => {
 	})
 	
 	chan = connect({
-		url: `ws://${window.location.host}/ws/room/${localStorage.getItem('room').hashCode()}`,
+		url: `${document.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}/ws/room/${localStorage.getItem('room').hashCode()}`,
 		heartbeat_timeout: 8000,
 		onopen: () => console.log('WS CONNECTED'),
 		onmessage: (msg) => { console.log(`WS RECEIVE MESSAGE: ${msg.data}`), receive(msg.data) },
