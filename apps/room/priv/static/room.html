@@ -1,0 +1,32 @@
+<html>
+  <head>
+	<link href='/static/darkroom.css' type='text/css' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Room - Darkroom</title>
+  </head>
+
+  <body>
+		<h1>Darkroom</h1>
+		<strong id='room_title'></strong>
+		<button id='logout'>Logout</button>
+		<button id='share'>Share room for friends</button>
+		<span id='share-info' style='background-color:yellow;display:none'>Link copied to clipboard!</span>
+		<section>
+			<div id='history'>
+			</div>
+		</section>
+		
+		<section>
+			<input id='message' type='text' placeholder='Message' autofocus>
+			<button id='send'>Send</button>
+		</section>
+		
+		<section>
+			<a href='https://github.com/m-2k/darkroom'>GitHub sources</a>
+		</section>
+		
+		<script src='/static/websocket.js'></script>
+		<script src='/static/darkroom.js'></script>
+		<script> init_room() </script>
+  </body>
+</html> 

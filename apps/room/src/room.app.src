@@ -1,0 +1,7 @@
+{application, room,
+  [{description, "Dark Room"},
+   {vsn, "0.0.1"},
+   {registered, []},
+   {applications, [kernel, stdlib, asn1]},
+   {mod, { room, []}},
+   {env, []} ]}.
